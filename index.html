@@ -138,6 +138,73 @@ body{background:#f5f8fd!important}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ez2 .teacher,.ez2 .hero-ui,.ez2 .ez-glow{animation:none!important}.ez2 .reveal{filter:none!important}}
 </style>
+
+<style>
+/* === Mobile-only hero layout refinement v2 ===
+   Desktop/tablet styles remain untouched. */
+@media (max-width:760px){
+  .ez2 .hero{
+    min-height:900px!important;
+    padding:54px 24px 0!important;
+  }
+  .ez2 .hero-copy{
+    max-width:100%!important;
+    position:relative!important;
+    z-index:6!important;
+  }
+  .ez2 .hero-title{
+    font-size:42px!important;
+    line-height:1.12!important;
+    letter-spacing:-2.6px!important;
+  }
+  /* Keep the three proof badges above the teacher, with breathing room. */
+  .ez2 .hero-copy > div:last-child{
+    position:relative!important;
+    z-index:8!important;
+    margin-top:28px!important;
+    gap:8px!important;
+    flex-wrap:nowrap!important;
+  }
+  .ez2 .hero-copy > div:last-child span{
+    padding:10px 12px!important;
+    font-size:12px!important;
+    white-space:nowrap!important;
+  }
+  /* Teacher enters from the right, but settles below the badges so the face stays clear. */
+  .ez2 .hero .teacher{
+    width:61%!important;
+    height:42%!important;
+    right:-4%!important;
+    bottom:-1%!important;
+    object-position:right bottom!important;
+    z-index:4!important;
+  }
+  /* HUD becomes a small supporting card near the lower-left, not a competing panel. */
+  .ez2 .hero-ui{
+    left:20px!important;
+    right:auto!important;
+    bottom:24px!important;
+    width:48%!important;
+    padding:12px 13px!important;
+    border-radius:14px!important;
+    z-index:7!important;
+  }
+  .ez2 .hero-ui > div:first-child{font-size:8px!important}
+  .ez2 .hero-ui > div:last-child{
+    margin-top:6px!important;
+    font-size:12px!important;
+    line-height:1.45!important;
+  }
+}
+@media (max-width:390px){
+  .ez2 .hero{min-height:870px!important;padding-left:20px!important;padding-right:20px!important}
+  .ez2 .hero-title{font-size:38px!important;letter-spacing:-2.2px!important}
+  .ez2 .hero-copy > div:last-child span{padding:9px 10px!important;font-size:11px!important}
+  .ez2 .hero .teacher{width:64%!important;height:40%!important;right:-7%!important}
+  .ez2 .hero-ui{left:16px!important;width:50%!important;bottom:20px!important}
+}
+</style>
+
 </head>
 <body>
 <div class="ez2" style="max-width:1080px;width:100%;margin:0 auto;font-family:Pretendard,'Noto Sans KR',Arial,sans-serif;color:#101828;word-break:keep-all;overflow:hidden;background:#fff;">
